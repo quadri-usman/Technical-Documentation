@@ -11,6 +11,29 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <div class="mobileHeader">
+            <header>JS Documentation</header>
+            <a href="#" class="hidden"><img src="/more.png" alt="ShowNav" title="NavMenu" width="50px"></a>
+        </div>
+        <ul>
+            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+            <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
+            <li><a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a></li>
+            <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
+            <li><a href="#Variables" class="nav-link">Variables</a></li>
+            <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
+            <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
+            <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
+            <li><a href="#Constants" class="nav-link">Constants</a></li>
+            <li><a href="#Data_types" class="nav-link">Data types</a></li>
+            <li><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
+            <li><a href="#while_statement" class="nav-link">while statement</a></li>
+            <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </nav>
+
     <main id="main-doc">
         <section id="Introduction" class="main-section">
             <header>Introduction</header>
@@ -62,9 +85,9 @@
             <header>Hello world</header>
             <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript
                 code:</p>
-                <div class="codes">
-                    <code>function greetMe(yourName) { alert("Hello " + yourName); } greetMe("World");</code>
-                </div>
+            <div class="codes">
+                <code>function greetMe(yourName) { alert("Hello " + yourName); } greetMe("World");</code>
+            </div>
             <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
         </section>
         <section id="Variables" class="main-section">
@@ -265,25 +288,28 @@
             </ul>
         </section>
     </main>
-    <nav id="navbar">
-        <header>JS Documentation</header>
-        <ul>
-            <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-            <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
-            <li><a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a></li>
-            <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
-            <li><a href="#Variables" class="nav-link">Variables</a></li>
-            <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
-            <li><a href="#Variable_scope" class="nav-link">Variable scope</a></li>
-            <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
-            <li><a href="#Constants" class="nav-link">Constants</a></li>
-            <li><a href="#Data_types" class="nav-link">Data types</a></li>
-            <li><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
-            <li><a href="#while_statement" class="nav-link">while statement</a></li>
-            <li><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
-            <li><a href="#Reference" class="nav-link">Reference</a></li>
-        </ul>
-    </nav>
+    <script>
+        var maindoc = document.querySelector("#main-doc")
+        var hidden = document.querySelector("nav a.hidden img");
+        var navUl = document.querySelector("nav ul");
+        var menu = document.querySelectorAll("nav ul a");
+        hidden.addEventListener("click", function (event) {
+            navUl.classList.toggle("tog");
+            maindoc.style.dispplay = "none";
+            // if (navUl.style.display == ''){
+            //     navUl.style.display = "block"
+            // }
+            // else if (navUl.style.display == "block"){
+            //     navUl.style.display = ''
+            // }
+        });
+        for (i=0; i<menu.length; i++){
+            menu[i].addEventListener("click", function(event){
+                navUl.classList.toggle("tog")
+            })
+        }
+    </script>
+
 </body>
 
 </html>
