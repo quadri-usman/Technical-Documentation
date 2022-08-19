@@ -8,11 +8,10 @@ html, body {
 main {
     display: block;
 }
-#main-doc {
-    position: absolute;
-    margin-left: 310px;
+#main-doc {    
+    margin-left: 10px;
     padding: 20px;
-    margin-bottom: 110px;
+    margin-bottom: 80px;
 }
 header {
     color: black;
@@ -68,8 +67,11 @@ code {
     width: 60%;
     font-family: monospace;
 }
+body{
+    display: flex;
+}
 #navbar {
-    position: fixed;
+    /* position: fixed; */
     min-width: 290px;
     top: 0px;
     left: 0px;
@@ -81,7 +83,7 @@ code {
     border-left-color: rgba(0, 22, 22, 0.4);
 }
 #navbar header{
-    padding: 10px 30px 0;
+    padding: 10px 20px 0;
 }
 #navbar ul {
     height: 88%;
@@ -102,17 +104,200 @@ code {
     position: relative;
     width: 100%;
 }
+nav a.hidden img{
+    display: none;
+}
 @media (max-width: 768px){
+    body{
+        display: grid;
+    }
+    main {
+        display: block;
+        margin: 0;
+    }
+    #main-doc {        
+        margin-left: 0px;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+    header {
+        color: black;
+        font-size: 1.5em;
+    }
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: rgb(77, 78, 83);
+        margin: 10px;
+        font-size: 0.86em;
+    }
+    section li {
+        margin: 10px 0px 0px 3px;
+        margin-top: 0;
+    }
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    ul {
+        list-style-type: disc;
+    }
     ul {
         display: block;
         list-style-type: disc;
-        margin-block-start: .5em;
+        margin-block-start: .8em;
+        margin-block-end: .8em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 30px;
+    }
+    ul ul {
+        list-style-type: circle;
+    }
+    .codes{
+        line-height: 2;
+        background-color: rgb(247, 247, 247);
+        padding: 15px;
+        margin: 8px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    code {
+        display: block;
+        text-align: left;
+        white-space: pre-line;
+        position: relative;
+        word-break: normal;
+        overflow-wrap: normal;
+        width: 70%;
+        font-family: monospace;
+    }
+    #navbar {        
+        min-width: 100%;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;        
+        border: none;
+    }
+    .mobileHeader{
+        display: flex;
+        justify-content: space-around;
+    }
+    #navbar header{
+        padding-top: 20px;
+    }
+    nav ul {
+        display: none;        
+    }
+    .tog{
+        display: block;
+        height: 100%;
+        padding: 0px;
+        overflow: none;
+        background-color: white;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: rgb(77, 78, 83);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #navbar li {
+        color: rgb(77, 78, 83);
+        border-top: 1px solid;
+        list-style: none;
+        position: relative;
+        width: 100%;
+    }
+    nav a.hidden img{
+        display: block;
+        width: 25px;
+        padding: 20px 0;
+    }   
+}
+@media(max-width: 400px){
+    main {
+        display: block;
+    }
+    
+    header {
+        color: black;
+        font-size: 1.1em;
+    }
+    p {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: rgb(77, 78, 83);
+        margin: 7px;
+        font-size: 0.70em;
+    }
+    section li {
+        margin: 5px 0px 0px 3px;
+        font-size: 0.70em;
+    }
+    li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+    }
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: .2em;
         margin-block-end: .5em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         padding-inline-start: 20px;
     }
-    code{
+
+    .codes{
+        line-height: 1.5;
+        background-color: rgb(247, 247, 247);
+        padding: 15px;
+        margin: 10px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
+    code {
+        display: block;
+        text-align: left;
+        white-space: pre-line;
+        position: relative;
+        word-break: normal;
+        overflow-wrap: normal;
+        width: 80%;
+        font-family: monospace;
+    }
+    .tog{
+        display: block;
+    }
+    #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: rgb(77, 78, 83);
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #navbar li {
+        color: rgb(77, 78, 83);
+        border-top: 1px solid;
+        list-style: none;
+        position: relative;
         width: 100%;
     }
+    nav a.hidden img{
+        display: block;
+        width: 20px;
+        padding: 15px 0;
+        
+    }   
 }
